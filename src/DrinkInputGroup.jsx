@@ -21,7 +21,7 @@ const DrinkInputGroup = ({ onSubmit }) => {
     let allInputsDone = true;
     const orderValuesArr = Object.values(order);
     orderValuesArr.forEach((orderValue) => {
-      orderValue === "" ? (allInputsDone = false) : "";
+       if(orderValue === ""){allInputsDone = false}
     });
 
     if (allInputsDone && onSubmit) {
